@@ -7,6 +7,7 @@
     padding: 0 5rem;
     background-color: var(--clr-neutral-100);
     position: relative;
+   
 }
 
 .navList{
@@ -16,6 +17,7 @@
     gap: 2rem;
     justify-content: space-between;
     font-size: var(--fs-400);
+   
     
 }
 
@@ -53,8 +55,8 @@
 }
 .menuOpen,
 .menuClose{
-    height: 50px;
-    width: 40px;
+    height: 3rem;
+    width: 2rem;
     cursor: pointer;
     position: absolute;
     top: 0;
