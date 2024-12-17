@@ -11,9 +11,6 @@
     flex-direction: column;
     justify-content: space-between;
    
-
-    
-   
 }
 .title{
     text-align: center;
@@ -43,4 +40,20 @@
     height: 100%;
     object-fit: cover;
     aspect-ratio: 1;
+}
+
+@media (max-width: 60em) {
+    .container{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        padding: 1rem 2rem;
+    }
+    .textContainer{
+        height: auto;
+        gap: 1rem;
+        justify-content: space-evenly;
+    }
+    .text{
+        font-size: var(--fs-600);
+    }
 }

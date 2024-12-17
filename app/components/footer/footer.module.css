@@ -22,3 +22,9 @@
     color: var(--clr-neutral-900);
     
 }
+
+@media (max-width: 50em){
+    .navList{
+        display: none;
+    }
+}

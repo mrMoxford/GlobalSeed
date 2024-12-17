@@ -28,3 +28,10 @@
     aspect-ratio: 1;
     align-self: center;
 }
+
+@media (max-width: 60em){
+    .imageContainer{
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: repeat(2,1fr);
+    }
+}

@@ -43,3 +43,9 @@
 .heading{
     margin-block: 1rem;
 }
+
+@media (max-width: 50em){
+    .twoColumns{
+        flex-direction: column;
+    }
+}
