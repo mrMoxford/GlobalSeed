@@ -1,0 +1,21 @@
+.programsContainer{
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 5rem;
+    gap: 2rem;
+    
+}
+
+.cardGrid{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 1rem;
+    
+   
+}
+.title{
+    font-size: var(--fs-800);
+    text-transform: uppercase;
+    text-align: center;
+    
+}

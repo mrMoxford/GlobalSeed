@@ -1,0 +1,27 @@
+
+
+.primaryNav{
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 5rem;
+    background-color: var(--clr-neutral-100);
+}
+
+.navList{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 2rem;
+    justify-content: space-between;
+    font-size: var(--fs-400);
+    
+}
+
+.link{
+    text-decoration: none;
+    color: var(--clr-neutral-900);
+   
+}
+
+

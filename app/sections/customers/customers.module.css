@@ -1,0 +1,25 @@
+
+
+.customersContainer{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+    padding: 2rem 5rem;
+    
+}
+
+.reviewGrid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 1rem;
+    padding: 4rem;
+}
+
+.title{
+    font-size: var(--fs-800);
+    color: var(--clr-neutral-100);
+    text-transform: uppercase;
+    text-align: center;
+}

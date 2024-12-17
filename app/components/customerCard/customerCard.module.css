@@ -1,0 +1,23 @@
+
+
+.cardGrid{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(2,1fr);
+    justify-items: center;
+    align-items: center;
+    background-color: var(--clr-neutral-100);
+    border-radius: 40px;
+    color: var(--clr-neutral-900);
+    padding: 2rem;
+    
+}
+
+.text{
+    grid-column: 1/ span 2;
+    font-size: var(--fs-500);
+}
+
+.image{
+    height: auto;
+}

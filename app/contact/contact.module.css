@@ -1,0 +1,37 @@
+
+
+.contactPage{
+    display: flex;
+    flex-direction: column;
+    padding:4rem;
+    gap: 2rem;
+    
+}
+
+
+.formContainer{
+    display: flex;
+    width: 30rem;
+    margin-inline: auto;
+   
+}
+
+.form{
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.input{
+    border-radius: 4px;
+}
+.button{
+    align-self: flex-end;
+    padding: 0 2rem;
+    color: var(--clr-neutral-100);
+    background-color: var(--clr-accent-100);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}

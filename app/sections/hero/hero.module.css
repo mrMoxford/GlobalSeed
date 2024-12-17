@@ -1,0 +1,46 @@
+.container{
+    display: grid;
+    align-items: center;
+    padding: 2rem 5rem;
+    gap: 1rem;
+    grid-template-columns: 1fr 1fr;
+}
+.textContainer{
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    justify-content: space-between;
+   
+
+    
+   
+}
+.title{
+    text-align: center;
+    text-transform: capitalize;
+    font-size: var(--fs-900);
+}
+.text{
+    text-align: center;
+    font-size: var(--fs-500);
+}
+
+.imageContainer{
+    display: grid;
+    align-content: center;
+    justify-content: center;
+    grid-template-columns: repeat(2, auto);
+  grid-template-rows: repeat(2, auto);
+  flex: 1;
+  gap: 1rem;
+}
+
+.image{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 40px;
+    height: 100%;
+    object-fit: cover;
+    aspect-ratio: 1;
+}
