@@ -1,61 +1,9 @@
 'use client'
-import { useRef, useState } from "react"
-import emailjs from '@emailjs/browser';
+
 import style from "./contact.module.css"
 export default function Contact() {
 
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [selection, setSelection] = useState("");
-  const [message, setMessage] = useState("");
-
-  const [isLoading, setIsLoading]  = useState(false);
-
-  const [error, setError] = useState("")
-  const [success, setSuccess] = useState("")
-  const form = useRef();
-
-  const sendEmail = (e) => {
-    e.preventDefault();
-    setSuccess("");
-    if(!email){
-      setError("Please enter your email")
-      return;
-    }
-    if(!message){
-      setError("Please enter your message")
-      return;
-    }
-
-    const templateParams = {
-      fullName: name,
-      email: email,
-      enquiry: enquiry,
-      message: message,
-    }
-
-    setError("")
-    setIsLoading(true)
-    emailjs
-      .sendForm(process.env.NEXT_APP_SERVICE_ID ?? "", process.env.NEXT_APP_TEMPLATE_ID ?? "", templateParams, {
-        publicKey: process.env.NEXT_APP_PUBLIC_KEY ?? "",
-      })
-      .then(
-        function(response){
-          setEmail(""),
-          setName("")
-          setSelection("")
-          setMessage("")
-          setIsLoading(false)
-          setSuccess("Your message has successfully been sent")
-        },
-        function(error){
-          setError("There was an error sending your message")
-          console.error(error)
-          setIsLoading(false)
-        }
-      );
-  };
+  
 
   return (
     <section id="contact" className={style.contactPage} >
