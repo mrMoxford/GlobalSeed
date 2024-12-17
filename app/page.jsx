@@ -1,5 +1,5 @@
 import About from "./sections/about/About";
-import Instagram from "./sections/instagramGrid/instagram";
+import Instagram from "./sections/instagramGrid/Instagram"
 import Customers from "./sections/customers/Customers";
 import Hero from "./sections/hero/Hero";
 import Partners from "./sections/partners/Partners";

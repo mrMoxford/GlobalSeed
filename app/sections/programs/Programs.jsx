@@ -1,4 +1,4 @@
-import MiniCard from '@/app/components/mini-card/miniCard'
+import MiniCard from '@/app/components/mini-card/MiniCard'
 import style from './programs.module.css'
 import swim from "../../../public/global-swim.png"
 import cheer from "../../../public/global-cheer.png"
