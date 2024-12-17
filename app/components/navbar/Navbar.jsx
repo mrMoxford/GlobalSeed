@@ -7,7 +7,7 @@ import Logo from '../../../public/globalseedlogo.png'
 import menuOpen from "../../../public/menuOpen.png"
 import menuClose from "../../../public/menuClose.png"
 
-export default function navbar() {
+export default function Navbar() {
   const [menuToggle, setMenuToggle] = useState(false);
 
   const handleNavLink = () =>{
