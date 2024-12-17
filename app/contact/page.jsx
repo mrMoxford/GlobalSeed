@@ -7,10 +7,9 @@ export default function Contact() {
 
   return (
     <section id="contact" className={style.contactPage} >
-      {status && renderAlert()}
       <h1 className={style.title}>Contact Us</h1>
       <article className={style.formContainer}>
-        <form ref={form} onSubmit={sendEmail} className={style.form}>
+        <form   className={style.form}>
             <label htmlFor="name">name:</label><input className={style.input} id="name" type="text" placeholder="Name" />
             <label htmlFor="email">email:</label><input className={style.input} id="email" type="email" placeholder="email@company.com" />
             <label htmlFor="enquiry">enquiry:</label><select id="enquiry" className={style.select} defaultValue="enquiry"  required>
@@ -36,8 +35,3 @@ export default function Contact() {
     </section>
   )
 }
-const renderAlert = () => (
-  <div className={style.sentMessage}>
-    <p>Thanks for messaging </p>
-  </div>
-);
