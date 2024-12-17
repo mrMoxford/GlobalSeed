@@ -56,15 +56,15 @@ export default function Contact() {
       <h1 className={style.title}>Contact Us</h1>
       <article className={style.formContainer}>
         <form  onSubmit={handleSubmit} className={style.form}>
-            <label htmlFor="name">name:</label><input className={style.input} name="name" value={userInput.name}
+            <label>name:</label><input className={style.input} name="name" value={userInput.name}
           onChange={handleChange}
           required type="text" placeholder="name"  />
-            <label htmlFor="email">email:</label><input className={style.input}   name="email"
+            <label>email:</label><input className={style.input}   name="email"
           value={userInput.email}
           onChange={handleChange}
           required type="email" placeholder="email@company.com"  />
-            <label htmlFor="enquiry">subject:</label><input className={style.input}  name="subject" value={userInput.subject} onChange={handleChange} required type="text" placeholder="Global cheer"  />
-            <label htmlFor="message">message:</label><textarea className={style.input}  name="message" value={userInput.message}
+            <label>subject:</label><input className={style.input}  name="subject" value={userInput.subject} onChange={handleChange} required type="text" placeholder="Global cheer"  />
+            <label>message:</label><textarea className={style.input}  name="message" value={userInput.message}
           onChange={handleChange}
           required rows="5" type="text" placeholder="message" />
             <button  type="submit" value="Send"  className={style.button}>Submit</button>
