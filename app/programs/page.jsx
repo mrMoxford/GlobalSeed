@@ -10,7 +10,7 @@ const globalT = {
   headingOne: "Morning Block:",
   hoBullets: ["10:00-10:30 Greeting and group warm up activity.","10:30-12:00: Activity rotation. Three 30 minute activities focusing on different points of athletics: Coordination, Stamina, Strength, Agility, and Teamwork","12:00-13:00 Lunchtime and break time"],
   headingTwo: "Afternoon Block:",
-  htBullets: ["3:00-14:45 STEM sports: American science and math education program sports integration lesson.","14:45 - 15:00 Final words, clean up and group picture."]
+  htBullets: ["13:00-14:45 STEM sports: American science and math education program sports integration lesson.","14:45 - 15:00 Final words, clean up and group picture."]
 
 }
 const globalS = {
@@ -22,7 +22,7 @@ const globalS = {
   headingOne: "Morning Block:",
   hoBullets: ["10:00-10:30 Greeting and group warm up activity.","10:30-12:00: Activity rotation. Three 30 minute activities focusing on different points of athletics: Coordination, Stamina, Strength, Agility, and Teamwork","12:00-13:00 Lunchtime and break time"],
   headingTwo: "Afternoon Block:",
-  htBullets: ["3:00-14:45 STEM sports: American science and math education program sports integration lesson.","14:45 - 15:00 Final words, clean up and group picture."]
+  htBullets: ["13:00-14:45 STEM sports: American science and math education program sports integration lesson.","14:45 - 15:00 Final words, clean up and group picture."]
 
 }
 
