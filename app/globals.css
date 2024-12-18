@@ -18,6 +18,15 @@
   --fs-900: 3.5rem;
 }
 
+@media (max-width: 50em) {
+  :root {
+  --fs-400: .3rem;
+  --fs-500: .5rem;
+  --fs-600: 1rem;
+  --fs-700:  1.5rem;
+  --fs-800: 2rem;
+  --fs-900: 3rem;}
+}
 
 /* https://piccalil.li/blog/a-modern-css-reset */
 
@@ -133,4 +142,8 @@ select {
 
 .bg-neutral-400{
   background-color: var(--clr-neutral-400);
+}
+
+.active{
+  color: var(--clr-accent-100);
 }

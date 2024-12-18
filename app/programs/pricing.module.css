@@ -11,10 +11,12 @@
     font-size: var(--fs-800)
 }
 
+.sectionTitle{
+    font-size: var(--fs-600);
+}
 .cardGrid{
     display:grid;
     grid-template-columns: repeat(2,1fr);
-    padding: 2rem 0;
     gap: 1rem;
 }
 
@@ -26,5 +28,8 @@
     .cardGrid{
         grid-template-columns: 1fr;
         grid-template-rows: repeat(2,1fr);
+    }
+    .container{
+        padding: 2rem;
     }
 }

@@ -2,9 +2,9 @@
 import Image from "next/image"
 import style from "./partners.module.css"
 import uof from "../../../public/UOF.png"
-import isu from "../../../public/ISU.png"
-import upenn from "../../../public/UPenn.png"
-import osu from "../../../public/OSU.png"
+import isu from "../../../public/LSU.png"
+import upenn from "../../../public/UCD.png"
+import osu from "../../../public/CC.png"
 export default function Partners() {
   return (
     <section className={style.partnersContainer}>

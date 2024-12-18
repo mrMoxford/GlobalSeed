@@ -26,7 +26,7 @@ export default function StudyAbroad() {
     <section className={style.studyAbroad}>
       <h1 className={style.title}>{content.title}</h1>
       <div className={style.container}>
-        <h2>{content.subHeading}</h2>
+        <h2 className={style.subHeading}>{content.subHeading}</h2>
         <div>
           <p className={style.priceInfo}>{content.priceInfo}</p>
         </div>
@@ -59,7 +59,7 @@ export default function StudyAbroad() {
           </div>
           
         </div>
-        <Link className="link" href="/contact">Contact Us</Link>
+        <Link className={style.button} href="/contact">Contact Us</Link>
       </div>
     </section>
   )

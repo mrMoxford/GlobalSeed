@@ -8,7 +8,7 @@ export default function Footer() {
   return (
     <footer className={styles.primaryNav}>
       <Link className= {styles.link} href= "/"><Image className= {styles.logo}src={Logo} alt="global-seed logo"  height= "50" width="auto"></Image></Link>
-      <ul  className = {styles.navList}>
+      {/* <ul  className = {styles.navList}>
         <Link className= {styles.link} href= "/"> Home</Link>
         <Link className= {styles.link}  href= "/about"> About</Link>
         <Link className= {styles.link} href= "/programs"> Programs</Link>
@@ -16,7 +16,7 @@ export default function Footer() {
         <Link className= {styles.link} href= "/consulting"> Consulting</Link>
         <Link className= {styles.link} href= "/contact"> Contact</Link>
       </ul>
-      <div> socials</div>
+      <div> socials</div> */}
     </footer>
   )
 }

@@ -26,6 +26,14 @@
     color: var(--clr-neutral-900);
    
 }
+.link:hover{
+    color: var(--clr-accent-100);
+}
+
+.active{
+    text-decoration: none;
+    color: var(--clr-accent-100);
+}
 .navbar_overlay {
     position: fixed;
     z-index: 900;

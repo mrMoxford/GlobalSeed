@@ -44,14 +44,12 @@ export default function Programs() {
     <main className={style.container}>
         <h1 className={style.title}>Programs</h1>
         <section className={style.cardContainer}>
-          <h2>Global Adventure</h2>
           <div className={style.cardGrid}>
           <GlobalAdventure className={style.primaryCard} props={globalT}/>
           <GlobalAdventure className={style.secondaryCard} props={globalS}/>
           </div>
         </section>
         <section className={style.cardContainer}>
-          <h2>Global Cheer</h2>
           <div className={style.cardGrid}>
           <GlobalCheer className={style.primaryCard} props={cheer}/>
           <GlobalCheer className={style.secondaryCard} props={cheerAdvanced}/>

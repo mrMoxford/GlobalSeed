@@ -3,7 +3,6 @@
     display: felx;
     text-align: center;
     flex-direction: column;
-    min-height: 100dvh;
     padding: 4rem;
     gap: 2rem;
     
@@ -15,8 +14,6 @@
     background-color: var(--clr-neutral-200);
     border-radius: 40px;
     color: var(--clr-neutral-900);
-    
-    padding-block: 2rem;
 }
 
 .twoColumns{
@@ -35,13 +32,26 @@
     padding: 1rem;
 }
 .title{
-    margin-block: 2rem;
+    margin: 1rem;
     font-size: var(--fs-700);
     text-transform: uppercase;
 
 }
+.subHeading{
+    margin: 1rem;
+}
 .heading{
     margin-block: 1rem;
+}
+
+.button{
+    background-color: var(--clr-accent-100);
+  padding: 1rem 2rem;
+  border-radius: 40px;
+  color: var(--clr-neutral-100);
+  text-decoration: none;
+  align-self: center;
+  margin: 1rem;
 }
 
 @media (max-width: 50em){

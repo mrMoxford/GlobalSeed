@@ -4,7 +4,7 @@ export default function PricingCard(props) {
   const details = props.props
   return (
     <section className={`${style.container} ${props.className}`}>
-            <h3 className={style.cardTitle}>{details.title}</h3>
+            <h2 className={style.cardTitle}>{details.title}</h2>
             <p className={style.info}>{details.priceInfo}</p>
             <div  className={style.textContainer}>
             <ul className={style.bullets}>
