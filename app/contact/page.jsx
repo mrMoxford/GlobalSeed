@@ -1,4 +1,5 @@
 "use client"
+
 import {useState } from "react"
 import emailjs from '@emailjs/browser';
 import style from "./contact.module.css"
@@ -23,9 +24,9 @@ export default function Contact() {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    const serviceID = process.env.NEXT_EMAILJS_SERVICE_ID;
-    const templateID = process.env.NEXT_EMAILJS_TEMPLATE_ID;
-    const userID = process.env.NEXT_EMAILJS_PUBLIC_KEY;
+    const serviceID = process.env.NEXT_PUBLIC_SERVICE_ID;
+    const templateID = process.env.NEXT_PUBLIC_TEMPLATE_ID;
+    const publicKey = process.env.NEXT_PUBLIC_KEY;
 
     try {
       const emailParams = {
@@ -35,19 +36,19 @@ export default function Contact() {
         message: userInput.message
       };
 
-      const res = await emailjs.send(serviceID, templateID, emailParams, userID);
-
+      const res = await emailjs.send(serviceID,templateID, emailParams, publicKey);
+    
       if (res.status === 200) {
         alert("Message sent successfully!");
         setUserInput({
           name: "",
           email: "",
           subject: "",
-          message: ""
+          message: "",
         });
       }
     } catch (error) {
-      console.error("Failed to send message. Please try again later.");
+      console.log({message: error});
     }
   };
 
