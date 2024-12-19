@@ -29,7 +29,7 @@ const details = props.props
             </ul>
             </div>
            
-            <Link className ="link" href='/contact'>Contact Us</Link>
+            <Link className ={style.button} href='/contact'>Contact Us</Link>
             </div>
     </section>
   )

@@ -12,12 +12,11 @@ export default function PricingCard(props) {
                     <li className={style.details} key={index}>{detail}</li>
                 ))}
             </ul>
-            
             <div className={style.disc}>
               <h4>{details.explain}</h4>
               <p>{details.expInfo}</p>
               </div>
-            <Link className ="link" href='/contact'>Contact Us</Link>
+            <Link className ={style.button} href='/contact'>Contact Us</Link>
             </div>
     </section>
     

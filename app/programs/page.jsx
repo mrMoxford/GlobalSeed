@@ -27,7 +27,7 @@ const globalS = {
 }
 
 const cheer = {
-  title:"Global Cheer",
+  title:"Global Cheer Beginner",
   priceInfo:"¥9,000 /mo + t-shirt & Pompom rental",
   details: ["Cheer Class for 1st-3rd grade","50 minute introductory cheer class","Time: First three Thursdays a month 16:00-16:50","Location: Shibuya Cultural Center Owada"],
   explain:"Class explanation:",

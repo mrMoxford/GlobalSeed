@@ -2,8 +2,7 @@ import style from "./studyAbroad.module.css"
 import Link from "next/link"
 
 const content = {
-title: "Study Abroad",
-subHeading: "Global Study Abroad",
+title: "Global Study Abroad",
 priceInfo: " CONTACT US FOR A FREE QUOTE",
 p1: "This program is for any athletes who want to pursue a college sports career abroad. You can learn normal English conversation of course, also English frequently used in sports coaching or training.This program is done with online lesson or live training. It up to your request!! If you need more info, just contact us.  info@globalseed-jp.com",
 pHeading1: "Study abroad agent for Athletes",
@@ -24,9 +23,8 @@ p6:"Please feel free to contact us if you are looking to start as a global athle
 export default function StudyAbroad() {
   return (
     <section className={style.studyAbroad}>
-      <h1 className={style.title}>{content.title}</h1>
       <div className={style.container}>
-        <h2 className={style.subHeading}>{content.subHeading}</h2>
+        <h1 className={style.title}>{content.title}</h1>
         <div>
           <p className={style.priceInfo}>{content.priceInfo}</p>
         </div>
@@ -36,11 +34,11 @@ export default function StudyAbroad() {
           <h3 className={style.heading}>{content.pHeading1}</h3>
           <p>{content.p2}</p>
           <h3 className={style.heading}>{content.lHeading1}</h3>
-          <ul>
+          <ul className={style.list}>
             {content.list1.map((bullet,index) => (<li key={index}>{bullet}</li>))}
           </ul>
           <h3 className={style.heading}>{content.lheading2}</h3>
-          <ul>
+          <ul className={style.list}>
             {content.list2.map((bullet,index) => ( <li key={index}>{bullet}</li>))}
           </ul>
           </div>
@@ -49,7 +47,7 @@ export default function StudyAbroad() {
             <h4 className={style.heading}>{content.pheading3}</h4>
             <p>{content.p3}</p>
             <h4 className={style.heading}>{content.lheading3}</h4>
-            <ul>
+            <ul className={style.list}>
               {content.list3.map((bullet,index) => (<li key={index}>{bullet}</li>))}
             </ul>
             <h4 className={style.heading}>{content.pheading4}</h4>
