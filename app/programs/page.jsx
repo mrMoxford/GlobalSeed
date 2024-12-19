@@ -34,7 +34,7 @@ const cheer = {
   expInfo:"A fun 50 minute introductory cheer class. Great for beginners to cheer! Learn cheer choreography in English with support from our Cheer coach Miki. Each class is themed to integrate different vocabulary and English grammar along with cheering. Every two months there will be a short presentation."}
 const cheerAdvanced = {
   title:"Global Cheer Advanced",
-  priceInfo:"¥9,000 /mo + t-shirt & Pompom rental",
+  priceInfo:"¥12,000 /mo + t-shirt & Pompom rental",
   details: ["Cheer Class for4th-6th grade","90 minute cheer class","Time: First three Thursdays a month 17:00-18:30","Location: Shibuya Cultural Center Owada"],
   explain:"Class explanation:",
   expInfo:"A fun 90 minute cheer class in English. This class will teach cheers, and some basic stunting from our cheer coach Miki. Each class is themed to integrate different vocabulary and English grammar along with cheering. There will be a short presentation show every two months."}

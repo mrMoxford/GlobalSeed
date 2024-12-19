@@ -34,7 +34,7 @@
 }
 .cardTitle{
     font-size: var(--fs-700);
-    margin-block: 2rem;
+    margin: 2rem;
     text-align: center;
     text-transform: uppercase;
 }

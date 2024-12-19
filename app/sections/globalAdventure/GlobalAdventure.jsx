@@ -13,15 +13,15 @@ const details = props.props
                 ))}
             </ul>
             <div className={style.disc}>
-            <h4>{details.explain}</h4>
+            <h3>{details.explain}</h3>
             <p>{details.expInfo}</p>
-            <h5>{details.headingOne}</h5>
+            <h4>{details.headingOne}</h4>
             <ul className={style.bullets}>
             {details.hoBullets.map((bullet,index) => (
                     <li className={style.details} key={index}>{bullet}</li>
                 ))}
             </ul>
-            <h5>{details.headingTwo}</h5>
+            <h4>{details.headingTwo}</h4>
             <ul className={style.bullets}>
             {details.htBullets.map((bullet,index) => (
                     <li className={style.details} key={index}>{bullet}</li>
