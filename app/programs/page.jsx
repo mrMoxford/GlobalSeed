@@ -8,7 +8,7 @@ const globalT = {
   explain: "Class explanation:",
   expInfo: "A full day excursion in the park. Enjoy the out doors with our native coaches. Split into morning and afternoon blocks.",
   headingOne: "Morning Block:",
-  hoBullets: ["10:00-10:30 Greeting and group warm up activity.","10:30-12:00: Activity rotation. Three 30 minute activities focusing on different points of athletics: Coordination, Stamina, Strength, Agility, and Teamwork","12:00-13:00 Lunchtime and break time"],
+  hoBullets: ["10:00-10:30 Greeting and group warm up activity.","10:30-12:00: Activity rotation. Three 30 minute activities focusing on different points of athletics: Coordination, Stamina, Strength, Agility, and Teamwork","12:00-13:00 Lunchtime and break"],
   headingTwo: "Afternoon Block:",
   htBullets: ["13:00-14:45 STEM sports: American science and math education program sports integration lesson.","14:45 - 15:00 Final words, clean up and group picture."]
 
@@ -16,7 +16,7 @@ const globalT = {
 const globalS = {
   title:"Global Adventure Shibuya",
   priceInfo: "¥10,000 /mo + t-shirt ",
-  details: ["Time: 2nd Sunday every month 10:00-15:00","Location: Yoyogi Park","Drop off and pick up: Yoyogi park Clock tower entrance near Harajuku Station.",],
+  details: ["Time: 2nd Sunday every month 10:00-15:00","Location: Yoyogi Park","Drop off and pick up: Yoyogi park clock tower entrance near Harajuku Station.",],
   explain: "Class explanation:",
   expInfo: "A full day excursion in the park. Enjoy the out doors with our native coaches. Split into morning and afternoon blocks.",
   headingOne: "Morning Block:",
