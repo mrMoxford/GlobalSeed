@@ -12,8 +12,7 @@ export default function About() {
         Our Mission
         </h2>
         <p>
-          At Global Seed, we specialize in guiding talented Japanese student-athletes toward achieving their goals at prestigious U.S. universities. With our unique support system, we handle every part of the journey—from preparing academic documents to organizing university visits and setting up interviews with coaches. We provide a seamless process...
-        </p>
+          At Global Seed, we specialize in guiding talented Japanese student-athletes toward achieving their goals at prestigious U.S. universities. With our unique support system, we handle every part of the journey—from preparing academic documents to organizing university visits and setting up interviews with coaches.
       </div>
     </section>
   )
