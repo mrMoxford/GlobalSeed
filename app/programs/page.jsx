@@ -28,16 +28,16 @@ const globalS = {
 
 const cheer = {
   title:"Global Cheer Beginner",
-  priceInfo:"¥9,000 /mo + t-shirt & Pompom rental",
-  details: ["Cheer Class for 1st-3rd grade","50 minute introductory cheer class","Time: First three Thursdays a month 16:00-16:50","Location: Shibuya Cultural Center Owada"],
+  priceInfo:"¥20,000 two month program of 8 lessons + t-shirt & Pompom rental",
+  details: ["Cheer Class for 1st-3rd grade","50 minute introductory cheer class","Time: First four Thursdays a month 16:00-16:50","Location: Near Shibuya Station"],
   explain:"Class explanation:",
-  expInfo:"A fun 50 minute introductory cheer class. Great for beginners to cheer! Learn cheer choreography in English with support from our Cheer coach Miki. Each class is themed to integrate different vocabulary and English grammar along with cheering. Every two months there will be a short presentation."}
+  expInfo:"A fun 50 minute introductory cheer class. Great for beginners to cheer! Learn cheer choreography in English with support from our Cheer coach Miki. Each class is themed to integrate different vocabulary and English grammar along with cheering. There will be a short presentation show every two months."}
 const cheerAdvanced = {
   title:"Global Cheer Advanced",
-  priceInfo:"¥12,000 /mo + t-shirt & Pompom rental",
-  details: ["Cheer Class for4th-6th grade","90 minute cheer class","Time: First three Thursdays a month 17:00-18:30","Location: Shibuya Cultural Center Owada"],
+  priceInfo:"¥25,000 two month program of 8 lessons+ t-shirt & Pompom rental",
+  details: ["Cheer Class for 4th-6th grade","90 minute cheer class","Time: First four Thursdays a month 17:00-18:30","Location: Shibuya Station Area"],
   explain:"Class explanation:",
-  expInfo:"A fun 90 minute cheer class in English. This class will teach cheers, and some basic stunting from our cheer coach Miki. Each class is themed to integrate different vocabulary and English grammar along with cheering. There will be a short presentation show every two months."}
+  expInfo:"A fun 90 minute cheer class in English. This class will teach more advanced cheer techniques, and some basic stunting from our cheer coach Miki. Each class is themed to integrate different vocabulary and English grammar along with cheering. There will be a short presentation show every two months."}
 
 export default function Programs() {
   return (
