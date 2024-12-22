@@ -6,11 +6,11 @@ const globalT = {
   priceInfo: "¥10,000 /mo + t-shirt ",
   details: ["Time: 4th Sunday every month 10:00-15:00","Location: Tachikawa Showakinen Park.","Drop off and pick up: Nishi Tachikawa Station park entrance. ",],
   explain: "Class explanation:",
-  expInfo: "A full day excursion in the park. Enjoy the out doors with our native coaches. Split into morning and afternoon blocks.",
+  expInfo: "A full day excursion in the park. This program develops social and physical welness. Split into morning and afternoon blocks.",
   headingOne: "Morning Block:",
-  hoBullets: ["10:00-10:30 Greeting and group warm up activity.","10:30-12:00: Activity rotation. Three 30 minute activities focusing on different points of athletics: Coordination, Stamina, Strength, Agility, and Teamwork","12:00-13:00 Lunchtime and break"],
+  hoBullets: ["10:00-10:30 Nature walk expanding environmental awareness. Greeting and group ice breaker activity.","10:30-12:00: Activity rotation. Three 30 minute group activities. Activity 1: Group stetching and athletic drills. Activity 2: Game focused on one or more points of athleticism, Coordination, Stamina, Strength, Agility, Teamwork. Activity 3: Scrimage game for the days focus sport.","12:00-13:00 Lunchtime and break"],
   headingTwo: "Afternoon Block:",
-  htBullets: ["13:00-14:45 STEM sports: American science and math education program sports integration lesson.","14:45 - 15:00 Final words, clean up and group picture."]
+  htBullets: ["13:00-14:45 STEM sports: American science and math education program for sports integration. 30 minute group discussion and exploration of the sports topic. 30 minute brainstorm making hypothesis. 45 minute experiment to get and analyze data.","14:45 - 15:00 Final words, clean up and group picture."]
 
 }
 const globalS = {
@@ -18,11 +18,11 @@ const globalS = {
   priceInfo: "¥10,000 /mo + t-shirt ",
   details: ["Time: 2nd Sunday every month 10:00-15:00","Location: Yoyogi Park","Drop off and pick up: Yoyogi park clock tower entrance near Harajuku Station.",],
   explain: "Class explanation:",
-  expInfo: "A full day excursion in the park. Enjoy the out doors with our native coaches. Split into morning and afternoon blocks.",
+  expInfo: "A full day excursion in the park. This program develops social and physical welness. Split into morning and afternoon blocks.",
   headingOne: "Morning Block:",
-  hoBullets: ["10:00-10:30 Greeting and group warm up activity.","10:30-12:00: Activity rotation. Three 30 minute activities focusing on different points of athletics: Coordination, Stamina, Strength, Agility, and Teamwork","12:00-13:00 Lunchtime and break time"],
+  hoBullets: ["10:00-10:30 Nature walk expanding environmental awareness. Greeting and group ice breaker activity.","10:30-12:00: Activity rotation. Three 30 minute group activities. Activity 1: Group stetching and athletic drills. Activity 2: Game focused on one or more points of athleticism, Coordination, Stamina, Strength, Agility, Teamwork. Activity 3: Scrimage game for the days focus sport.","12:00-13:00 Lunchtime and break"],
   headingTwo: "Afternoon Block:",
-  htBullets: ["13:00-14:45 STEM sports: American science and math education program sports integration lesson.","14:45 - 15:00 Final words, clean up and group picture."]
+  htBullets: ["13:00-14:45 STEM sports: American science and math education program for sports integration. 30 minute group discussion and exploration of the sports topic. 30 minute brainstorm making hypothesis. 45 minute experiment to get and analyze data.","14:45 - 15:00 Final words, clean up and group picture."]
 
 }
 
