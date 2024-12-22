@@ -11,8 +11,8 @@ export default function Hero() {
   return (
     <section className={style.container}>
     <header className={style.textContainer}>
-      <h1 className={style.title}>connecting the world through sports</h1>
-      <p className={style.text}>We help talented athletes secure international University scholarships. </p>
+      <h1 className={style.title}>Connecting the world through sports and English </h1>
+      <p className={style.text}>  </p>
       <Link className="link" href="#about"> Learn More </Link>
     </header>
     <div className={style.imageContainer}>
