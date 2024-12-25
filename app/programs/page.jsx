@@ -1,6 +1,7 @@
 import GlobalCheer from '../sections/globalCheer/GlobalCheer'
 import GlobalAdventure from '../sections/globalAdventure/GlobalAdventure'
 import style from './pricing.module.css'
+<<<<<<< HEAD
 const globalT = {
   title:"Global Adventure Tachikawa",
   priceInfo: "¥10,000 /mo + t-shirt ",
@@ -23,9 +24,18 @@ const globalS = {
   hoBullets: ["10:00-10:30 Nature walk expanding environmental awareness. Greeting and group ice breaker activity.","10:30-12:00: Activity rotation. Three 30 minute group activities. Activity 1: Group stetching and athletic drills. Activity 2: Game focused on one or more points of athleticism, Coordination, Stamina, Strength, Agility, Teamwork. Activity 3: Scrimage game for the days focus sport.","12:00-13:00 Lunchtime and break"],
   headingTwo: "Afternoon Block:",
   htBullets: ["13:00-14:45 STEM sports: American science and math education program for sports integration. 30 minute group discussion and exploration of the sports topic. 30 minute brainstorm making hypothesis. 45 minute experiment to get and analyze data.","14:45 - 15:00 Final words, clean up and group picture."]
+=======
+import {getProgramme} from "../lib/contentful"
 
-}
+const GlobalCheerA = await getProgramme("5RBifgexTEE1zE3WbD1apc", false)
+const GlobalCheerB = await getProgramme("66vIUTeoN51KqEVzEKL0jD", false)
+const GLobalAdventureT = await getProgramme("34IP87NRcEkz6X7xDNfwqb", false)
+const GLobalAdventureS = await getProgramme("5fZbbYpbjq3if8qzv6oCzO", false)
 
+>>>>>>> 705a3e1 (cms updates)
+
+
+<<<<<<< HEAD
 const cheer = {
   title:"Global Cheer Beginner",
   priceInfo:"¥20,000 two month program of 8 lessons + t-shirt & Pompom rental",
@@ -38,6 +48,8 @@ const cheerAdvanced = {
   details: ["Cheer Class for 4th-6th grade","90 minute cheer class","Time: First four Thursdays a month 17:00-18:30","Location: Shibuya Station Area"],
   explain:"Class explanation:",
   expInfo:"A fun 90 minute cheer class in English. This class will teach more advanced cheer techniques, and some basic stunting from our cheer coach Miki. Each class is themed to integrate different vocabulary and English grammar along with cheering. There will be a short presentation show every two months."}
+=======
+>>>>>>> 705a3e1 (cms updates)
 
 export default function Programs() {
   return (
@@ -45,14 +57,14 @@ export default function Programs() {
         <h1 className={style.title}>Programs</h1>
         <section className={style.cardContainer}>
           <div className={style.cardGrid}>
-          <GlobalAdventure className={style.primaryCard} props={globalT}/>
-          <GlobalAdventure className={style.secondaryCard} props={globalS}/>
+          <GlobalAdventure className={style.primaryCard} content={GLobalAdventureT}/>
+          <GlobalAdventure className={style.secondaryCard} content={GLobalAdventureS}/>
           </div>
         </section>
         <section className={style.cardContainer}>
           <div className={style.cardGrid}>
-          <GlobalCheer className={style.primaryCard} props={cheer}/>
-          <GlobalCheer className={style.secondaryCard} props={cheerAdvanced}/>
+          <GlobalCheer className={style.primaryCard} content={GlobalCheerB}/>
+          <GlobalCheer className={style.secondaryCard} content={GlobalCheerA}/>
           </div>
           
         </section>

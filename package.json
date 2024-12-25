@@ -9,10 +9,14 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@contentful/live-preview": "^4.6.3",
+    "@contentful/rich-text-react-renderer": "^16.0.1",
+    "@contentful/rich-text-types": "^17.0.0",
     "@emailjs/browser": "^4.4.1",
+    "contentful": "^11.3.3",
     "next": "15.0.3",
-    "react": "19.0.0-rc-66855b96-20241106",
-    "react-dom": "19.0.0-rc-66855b96-20241106"
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
   },
   "devDependencies": {
     "eslint": "^8",

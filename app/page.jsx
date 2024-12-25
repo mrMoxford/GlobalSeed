@@ -4,7 +4,15 @@ import Hero from "./sections/hero/Hero";
 import Partners from "./sections/partners/Partners";
 import Programs from "./sections/programs/Programs"
 
-export default function Home() {
+
+
+
+
+
+
+
+export default async function Home() {
+
   return (
     <main>
       <Hero/>
