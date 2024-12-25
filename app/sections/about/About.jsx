@@ -15,12 +15,8 @@ export default function About() {
         {data.title}
         </h2>
         <p>
-<<<<<<< HEAD
-          At Global Seed, we specialize in guiding talented Japanese student-athletes toward achieving their goals at prestigious U.S. universities. With our unique support system, we handle every part of the journey—from preparing academic documents to organizing university visits and setting up interviews with coaches.
-=======
          {data.discription}
         </p>
->>>>>>> 705a3e1 (cms updates)
       </div>
     </section>
   )
