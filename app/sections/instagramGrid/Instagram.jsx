@@ -1,5 +1,5 @@
 "use client"
-import { ElfsightWidget } from 'react-elfsight-widget';
+import { ElfsightWidget } from 'next-elfsight-widget';
 import style from "./instagram.module.css"
 
 const Instagram = () => {

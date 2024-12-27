@@ -2,7 +2,7 @@
 import "./globals.css";
 import Navbar from "./components/navbar/Navbar";
 import Footer from "./components/footer/Footer";
-
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 export const metadata = {
   title: "Global Seed",
@@ -15,6 +15,7 @@ export default function RootLayout({ children }) {
       <body >
         <Navbar/>
         {children}
+        <SpeedInsights />
         <Footer/>
       </body>
     </html>
