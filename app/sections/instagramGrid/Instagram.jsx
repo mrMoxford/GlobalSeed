@@ -1,10 +1,11 @@
+"use client"
+import { ElfsightWidget } from 'react-elfsight-widget';
 import style from "./instagram.module.css"
 
 const Instagram = () => {
   return (
     <div className={style.container}>
-        <script src="https://static.elfsight.com/platform/platform.js" async></script>
-        <div className="elfsight-app-f51defa7-b1a5-4e10-8d28-4e357ce5fa72" data-elfsight-app-lazy></div>
+      <ElfsightWidget widgetId={"f51defa7-b1a5-4e10-8d28-4e357ce5fa72"} lazy />;
     </div>
   )
 }

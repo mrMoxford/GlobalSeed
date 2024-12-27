@@ -1,9 +1,23 @@
 .container{
     display: grid;
+    position: relative;
     align-items: center;
     padding: 2rem 5rem;
     gap: 1rem;
     grid-template-columns: 1fr 1fr;
+    
+}
+.container ::after{
+    content: "";
+    position: absolute;
+    height: 3rem;
+    aspect-ratio: 1;
+    bottom: 50%;
+    right: 50%;
+    z-index: -1;
+    background-color: hsla(0,0%,100%,0.1);
+    border-radius: 50%;
+    filter: blur(20px)
 }
 .textContainer{
     display: flex;
