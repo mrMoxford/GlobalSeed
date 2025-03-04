@@ -5,7 +5,7 @@ import GlobalCheer from '../sections/globalCheer/GlobalCheer';  // Import your G
 import GlobalAdventure from '../sections/globalAdventure/GlobalAdventure';  // Import your GlobalAdventure component
 import style from './pricing.module.css';  // Import your CSS module for styling
 import { getProgramme } from '../lib/contentful';  // Import the function to fetch program data from Contentful
-
+console.log(ContentfulLivePreviewProvider);
 // ✅ Async function to fetch data
 async function fetchProgramData(isEnabled) {
   const GlobalCheerA = await getProgramme('5RBifgexTEE1zE3WbD1apc', isEnabled);
@@ -22,7 +22,7 @@ async function fetchProgramData(isEnabled) {
 
 // ✅ Async component
 export default async function Programs() {
-  const { isEnabled } = draftMode();  // Check if preview mode is enabled
+  const { isEnabled } = await draftMode();  // Check if preview mode is enabled
   const { GlobalCheerA, GlobalCheerB, GlobalAdventureT, GlobalAdventureS } = await fetchProgramData(isEnabled);
 
   const Content = (
