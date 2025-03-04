@@ -40,7 +40,7 @@ export async function GET(request) {
 
   // Redirect to the fixed preview page, passing the program ID and any other necessary query params
   redirect(
-    `/programs/?${new URLSearchParams({
+    `/programs?${new URLSearchParams({
       id: programId,
       'x-vercel-protection-bypass': bypass || '',
       'x-vercel-set-bypass-cookie': 'samesitenone',
