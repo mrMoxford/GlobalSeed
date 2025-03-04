@@ -12,12 +12,6 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "packageManager": "npm@10.5.2",
-  "overrides": {
-    "react": "$react",
-    "react-dom": "$react-dom",
-    "next": "$next"
-  },
   "dependencies": {
     "@contentful/live-preview": "^4.6.9",
     "@contentful/rich-text-react-renderer": "^16.0.1",
