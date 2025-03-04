@@ -1,7 +1,4 @@
-// Assuming you have contentful-live-preview.js available globally via CDN
-// If the CDN isn't available, you need to host the library or build a version for the browser.
-
-window.ContentfulLivePreview = window.ContentfulLivePreview || {};
+import { ContentfulLivePreview } from '@contentful/live-preview';
 
 ContentfulLivePreview.init({
   locale: 'en-US',
