@@ -2,8 +2,11 @@
 
 import { ContentfulLivePreviewProvider } from "@contentful/live-preview/react";
 
-export function ContentfulPreviewProvider({ children }) {
+// Your custom ContentfulPreviewProvider wrapper
+export function ContentfulPreviewProvider({ children, ...props }) {
   return (
-    <ContentfulLivePreviewProvider>{children}</ContentfulLivePreviewProvider>
+    <ContentfulLivePreviewProvider {...props}>
+      {children}
+    </ContentfulLivePreviewProvider>
   );
 }
