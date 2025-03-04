@@ -1,3 +1,4 @@
+
 import GlobalCheer from '../sections/globalCheer/GlobalCheer'
 import GlobalAdventure from '../sections/globalAdventure/GlobalAdventure'
 import style from './pricing.module.css'
@@ -13,6 +14,7 @@ const GLobalAdventureS = await getProgramme("5fZbbYpbjq3if8qzv6oCzO", false)
 
 export default function Programs() {
   return (
+    
     <main className={style.container}>
         <h1 className={style.title}>Programs</h1>
         <section className={style.cardContainer}>
@@ -29,6 +31,5 @@ export default function Programs() {
           
         </section>
     </main>
-    
   )
 }
