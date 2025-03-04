@@ -21,8 +21,7 @@ const RICH_TEXT_OPTIONS = {
   
   }
 
-
-
+ 
 export default function GlobalAdventure(props) {
 const content = props.content
 
@@ -33,7 +32,8 @@ const content = props.content
             <p className={style.info}>{content.priceInfo}</p>
             <div  className={style.textContainer}>
               {documentToReactComponents(content.details.json,RICH_TEXT_OPTIONS)}
-            <Link className ={style.button} href='/contact'>Contact Us</Link>
+           <Link className ={style.button} href='https://app.jibun-apps.jp/form/6c99f0e1-88ee-4f79-ad95-6d1f329c5d7d/new' target='_blank'>Contact Us</Link>
+
             </div>
     </section>
   )
