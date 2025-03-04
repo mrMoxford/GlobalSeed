@@ -1,4 +1,4 @@
-import { getAllProgrammes } from "../lib/contentful";
+import { getAllProgrammes } from "../../lib/contentful";
 import { cookies, draftMode } from 'next/headers';
 import { redirect } from 'next/navigation';
 
