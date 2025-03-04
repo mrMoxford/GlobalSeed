@@ -5,17 +5,17 @@ import GlobalAdventure from '../sections/globalAdventure/GlobalAdventure'
 import style from './pricing.module.css'
 import {getProgramme} from "../lib/contentful"
 
-const isEnabled = draftMode();
-const GlobalCheerA = await getProgramme("5RBifgexTEE1zE3WbD1apc", isEnabled)
-const GlobalCheerB = await getProgramme("66vIUTeoN51KqEVzEKL0jD", isEnabled)
-const GLobalAdventureT = await getProgramme("34IP87NRcEkz6X7xDNfwqb", isEnabled)
-const GLobalAdventureS = await getProgramme("5fZbbYpbjq3if8qzv6oCzO", isEnabled)
 
 
 
 
-export default function Programs() {
- 
+
+export default async function Programs() {
+  const isEnabled = draftMode();
+  const GlobalCheerA = await getProgramme("5RBifgexTEE1zE3WbD1apc", isEnabled)
+  const GlobalCheerB = await getProgramme("66vIUTeoN51KqEVzEKL0jD", isEnabled)
+  const GLobalAdventureT = await getProgramme("34IP87NRcEkz6X7xDNfwqb", isEnabled)
+  const GLobalAdventureS = await getProgramme("5fZbbYpbjq3if8qzv6oCzO", isEnabled)
   return (
     <ContentfulLivePreviewProvider
       locale="en-US" // This is required and allows you to set the locale once and have it reused throughout the preview
