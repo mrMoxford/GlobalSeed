@@ -1,6 +1,6 @@
 import { draftMode } from "next/headers";
 import { notFound } from 'next/navigation';
-import { ContentfulPreviewProvider } from "./previewPrograms";
+import { ContentfulLivePreviewProvider } from "./previewPrograms";
 import GlobalCheer from '../sections/globalCheer/GlobalCheer'
 import GlobalAdventure from '../sections/globalAdventure/GlobalAdventure'
 import style from './pricing.module.css'
@@ -22,7 +22,7 @@ export default  function Programs() {
   
 
   return (
-    <ContentfulPreviewProvider
+    <ContentfulLivePreviewProvider
       locale="en-US" // This is required and allows you to set the locale once and have it reused throughout the preview
       enableInspectorMode={isEnabled} // This allows you to toggle the inspector mode which is on by default
       enableLiveUpdates={isEnabled} // This allows you to toggle the live updates which is on by default
@@ -47,6 +47,6 @@ export default  function Programs() {
         </section>
        
     </main>
-    </ContentfulPreviewProvider>
+    </ContentfulLivePreviewProvider>
   )
 }
