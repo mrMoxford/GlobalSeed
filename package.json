@@ -15,7 +15,6 @@
   "dependencies": {
     "@contentful/live-preview": "^4.6.9",
     "@contentful/rich-text-react-renderer": "^16.0.1",
-    "@contentful/vercel-nextjs-toolkit": "^1.4.1",
     "@emailjs/browser": "^4.4.1",
     "@vercel/speed-insights": "^1.2.0",
     "eslint-config": "^0.3.0",
