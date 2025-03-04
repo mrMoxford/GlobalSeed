@@ -1,5 +1,5 @@
 // app/api/preview/route.js (or any other relevant API route in your Next.js App)
-import { getProgramme } from '../lib/contentful'; // Adjust the path accordingly
+import { getProgramme } from '../../lib/contentful'; // Adjust the path accordingly
 import { cookies, draftMode } from 'next/headers';
 import { redirect } from 'next/navigation';
 
