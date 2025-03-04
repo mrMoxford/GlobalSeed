@@ -39,6 +39,6 @@ export async function GET(request) {
   });
 
   // Redirect to the fixed preview page, passing the program ID and any other necessary query params
-  redirect(`/programs/?id=${programId}&preview=true`);
+  redirect(`/programs/?id=${programId}`);
 
 }
