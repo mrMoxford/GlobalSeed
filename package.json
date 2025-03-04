@@ -12,17 +12,24 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "packageManager": "npm@10.5.2",
+  "overrides": {
+    "react": "$react",
+    "react-dom": "$react-dom",
+    "next": "$next"
+  },
   "dependencies": {
     "@contentful/rich-text-react-renderer": "^16.0.1",
+    "@contentful/vercel-nextjs-toolkit": "^1.4.1",
     "@emailjs/browser": "^4.4.1",
-    "@vercel/speed-insights": "^1.1.0",
-    "next": "^15.1.2",
+    "@vercel/speed-insights": "^1.2.0",
+    "next": "^15.2.1",
     "next-elfsight-widget": "^1.1.1",
     "prop-types": "^15.8.1",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
   },
   "devDependencies": {
-    "eslint": "^9.17.0"
+    "eslint": "^9.21.0"
   }
 }
