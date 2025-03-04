@@ -1,12 +1,29 @@
-export default async function Programs() {
-  const { isEnabled } = draftMode(); // ✅ Correct way to access draft mode
-  console.log("Is Preview Mode Enabled?", isEnabled);  // Debugging
+import { draftMode } from 'next/headers';  // Import draftMode from next/headers
+import { notFound } from 'next/navigation';  // Import notFound from next/navigation
+import { ContentfulLivePreviewProvider } from './previewPrograms';  // Import ContentfulLivePreviewProvider for live preview
+import GlobalCheer from '../sections/globalCheer/GlobalCheer';  // Import your GlobalCheer component
+import GlobalAdventure from '../sections/globalAdventure/GlobalAdventure';  // Import your GlobalAdventure component
+import style from './pricing.module.css';  // Import your CSS module for styling
+import { getProgramme } from '../lib/contentful';  // Import the function to fetch program data from Contentful
 
-  const { GlobalCheerA, GlobalCheerB, GlobalAdventureT, GlobalAdventureS } = await fetchProgramData(isEnabled);
+// ✅ Async function to fetch data
+async function fetchProgramData(isEnabled) {
+  const GlobalCheerA = await getProgramme('5RBifgexTEE1zE3WbD1apc', isEnabled);
+  const GlobalCheerB = await getProgramme('66vIUTeoN51KqEVzEKL0jD', isEnabled);
+  const GlobalAdventureT = await getProgramme('34IP87NRcEkz6X7xDNfwqb', isEnabled);
+  const GlobalAdventureS = await getProgramme('5fZbbYpbjq3if8qzv6oCzO', isEnabled);
 
   if (!GlobalCheerA || !GlobalCheerB || !GlobalAdventureT || !GlobalAdventureS) {
-    notFound();
+    notFound();  // If any data is missing, show a 404
   }
+
+  return { GlobalCheerA, GlobalCheerB, GlobalAdventureT, GlobalAdventureS };
+}
+
+// ✅ Async component
+export default async function Programs() {
+  const { isEnabled } = draftMode();  // Check if preview mode is enabled
+  const { GlobalCheerA, GlobalCheerB, GlobalAdventureT, GlobalAdventureS } = await fetchProgramData(isEnabled);
 
   const Content = (
     <main className={style.container}>
