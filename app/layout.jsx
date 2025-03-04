@@ -1,11 +1,17 @@
 import { ContentfulLivePreviewProvider } from "@contentful/live-preview/react";
-import Navbar from './Navbar';
-import SpeedInsights from './SpeedInsights';
-import Footer from './Footer';
+import Navbar from './components/navbar/Navbar';
+import {SpeedInsights} from "@vercel/speed-insights/next";
+import Footer from './components/footer/Footer';
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      <head>
+        <script
+          type="text/javascript"
+          src="/contentful-live-preview.js"
+        ></script>
+      </head>
       <body>
         <ContentfulLivePreviewProvider
           locale="en-US" // Set the locale for live preview
