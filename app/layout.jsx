@@ -1,5 +1,5 @@
 import { draftMode } from "next/headers";
-import { ContentfulPreviewProvider } from "../components/contentful-preview-provider";
+import { ContentfulLivePreviewProvider } from "@contentful/live-preview/react";
 import "./globals.css";
 import Navbar from "./components/navbar/Navbar";
 import Footer from "./components/footer/Footer";
@@ -17,7 +17,7 @@ export default function RootLayout({ children }) {
      
       <body >
         <Navbar/>
-        <ContentfulPreviewProvider
+        <ContentfulLivePreviewProvider
       locale="en-US" // This is required and allows you to set the locale once and have it reused throughout the preview
       enableInspectorMode={true} // This allows you to toggle the inspector mode which is on by default
       enableLiveUpdates={true} // This allows you to toggle the live updates which is on by default
@@ -25,7 +25,7 @@ export default function RootLayout({ children }) {
       targetOrigin="https://app.contentful.com" // This allows you to configure the allowed host of the live preview (default: ['https://app.contentful.com', 'https://app.eu.contentful.com'])
     >
         {children}
-        </ContentfulPreviewProvider>
+        </ContentfulLivePreviewProvider>
         <SpeedInsights />
         <Footer/>
       </body>
