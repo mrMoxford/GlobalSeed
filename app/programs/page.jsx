@@ -11,7 +11,7 @@ import {getProgramme} from "../lib/contentful"
 
 
 export default async function Programs() {
-  const isEnabled = draftMode();
+  const isEnabled = await draftMode();
   const GlobalCheerA = await getProgramme("5RBifgexTEE1zE3WbD1apc", isEnabled)
   const GlobalCheerB = await getProgramme("66vIUTeoN51KqEVzEKL0jD", isEnabled)
   const GLobalAdventureT = await getProgramme("34IP87NRcEkz6X7xDNfwqb", isEnabled)
