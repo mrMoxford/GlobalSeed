@@ -1,4 +1,4 @@
-// app/api/preview/route.js (or any other relevant API route in your Next.js App)
+// / app/api/preview/route.js (or any other relevant API route in your Next.js App)
 import { getProgramme } from '../../lib/contentful'; // Adjust the path accordingly
 import { cookies, draftMode } from 'next/headers';
 import { redirect } from 'next/navigation';
@@ -39,6 +39,11 @@ export async function GET(request) {
   });
 
   // Redirect to the fixed preview page, passing the program ID and any other necessary query params
-  redirect(`/programs/?id=${programId}`);
-
+  redirect(
+    `/programs?${new URLSearchParams({
+      id: programId,
+      'x-vercel-protection-bypass': bypass || '',
+      'x-vercel-set-bypass-cookie': 'samesitenone',
+    }).toString()}`
+  );
 }
