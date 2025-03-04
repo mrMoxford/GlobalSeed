@@ -1,17 +1,9 @@
-
 "use client";
-
 
 import { ContentfulLivePreviewProvider } from "@contentful/live-preview/react";
 
-
-export function ContentfulPreviewProvider({
-  children,
-  ...props
-}) {
+export function ContentfulPreviewProvider({ children }) {
   return (
-    <ContentfulLivePreviewProvider {...props}>
-      {children}
-    </ContentfulLivePreviewProvider>
+    <ContentfulLivePreviewProvider>{children}</ContentfulLivePreviewProvider>
   );
 }

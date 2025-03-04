@@ -27,14 +27,11 @@ export async function GET(request) {
   }
 
   // Enable Draft Mode to fetch the preview content
-  (await draftMode()).enable();
+  draftMode().enable();
 
   // Manually override cookie for live-preview support
-  const cookieStore = await cookies();
-  const cookie = cookieStore.get('__prerender_bypass');
-  cookieStore.set({
-    name: '__prerender_bypass',
-    value: cookie?.value,
+  const cookie = cookies().get('__prerender_bypass');
+  cookies().set('__prerender_bypass', cookie?.value, {
     httpOnly: true,
     path: '/',
     secure: true,
@@ -43,6 +40,10 @@ export async function GET(request) {
 
   // Redirect to the fixed preview page, passing the program ID and any other necessary query params
   redirect(
-    `/programs/?id=${programId}&x-vercel-protection-bypass=${bypass}&x-vercel-set-bypass-cookie=samesitenone`
+    `/programs/?${new URLSearchParams({
+      id: programId,
+      'x-vercel-protection-bypass': bypass || '',
+      'x-vercel-set-bypass-cookie': 'samesitenone',
+    }).toString()}`
   );
 }
