@@ -6,6 +6,7 @@ import {getMiniCard} from "../../lib/contentful"
 import { draftMode } from 'next/headers'
 import { ContentfulPreviewProvider } from '@/app/api/contentful-preview/previewAPI'
 const {isEnabled} = await draftMode()
+
 const globalSwim = await getMiniCard("2Jazk6kLlVg74UHIdQQKyi", isEnabled)
 const globalCheer = await getMiniCard("6ULZMQgTJsMViKlDQrVsFr", isEnabled)
 const globalPark = await getMiniCard("5NCb1ROGaiLt7Rf3fGiIhy", isEnabled)

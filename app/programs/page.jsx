@@ -8,7 +8,7 @@ import GlobalAdventure from "../sections/globalAdventure/GlobalAdventure";
 import style from './pricing.module.css';  
 import { getProgramme } from '../lib/contentful'; 
 
-
+const { isEnabled } = await draftMode(); 
 async function fetchProgramData(isEnabled) {
   const GlobalCheerA = await getProgramme('5RBifgexTEE1zE3WbD1apc', isEnabled);
   const GlobalCheerB = await getProgramme('66vIUTeoN51KqEVzEKL0jD', isEnabled);
@@ -22,9 +22,9 @@ async function fetchProgramData(isEnabled) {
   return { GlobalCheerA, GlobalCheerB, GlobalAdventureT, GlobalAdventureS };
 }
 
-// ✅ Async component
+
 export default async function Programs() {
-  const { isEnabled } = await draftMode();  
+  
   const { GlobalCheerA, GlobalCheerB, GlobalAdventureT, GlobalAdventureS } = await fetchProgramData(isEnabled);
   
   

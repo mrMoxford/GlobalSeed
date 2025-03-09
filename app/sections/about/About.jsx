@@ -6,7 +6,7 @@ import { useContentfulLiveUpdates, useContentfulInspectorMode } from "@contentfu
 
 export default function About({data}) {
   const updatedData = useContentfulLiveUpdates(data);
-  console.log(updatedData)
+  
 
   const inspectorProps = useContentfulInspectorMode();
   
