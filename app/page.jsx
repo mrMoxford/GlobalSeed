@@ -12,8 +12,12 @@ import { draftMode } from "next/headers";
 
 
 export default async function Home() {
-
-  const { isEnabled } = draftMode()
+  const {isEnabled} = await draftMode()
+  try {
+   isEnabled
+  } catch (e) {
+    console.error("draftMode() is not available:", e);
+  }
 
   const HeroData = await getHero("1DAm1YnETUcalNhWN8QZyr", isEnabled)
   
