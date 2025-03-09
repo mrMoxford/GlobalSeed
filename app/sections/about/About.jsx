@@ -4,7 +4,9 @@ import style from './about.module.css'
 import Image from 'next/image'
 import { useContentfulLiveUpdates, useContentfulInspectorMode } from "@contentful/live-preview/react";
 import { ContentfulPreviewProvider } from "../../api/contentful-preview/previewAPI";
-export default function About({data,isEnabled}) {
+
+export default  function About({data,isEnabled}) {
+ 
   const updatedData = useContentfulLiveUpdates(data);
   
 

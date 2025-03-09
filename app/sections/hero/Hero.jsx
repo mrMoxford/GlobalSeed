@@ -6,6 +6,7 @@ import Image from 'next/image'
 import { useContentfulLiveUpdates, useContentfulInspectorMode } from "@contentful/live-preview/react";
 import { ContentfulPreviewProvider } from "../../api/contentful-preview/previewAPI";
 export default function Hero({data,isEnabled}) {
+  
   const updatedData = useContentfulLiveUpdates(data);
 
   const inspectorProps = useContentfulInspectorMode();
