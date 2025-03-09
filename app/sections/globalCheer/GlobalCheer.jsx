@@ -16,13 +16,13 @@ import { useContentfulLiveUpdates, useContentfulInspectorMode } from "@contentfu
   const RICH_TEXT_OPTIONS = {
     renderNode: {
       [BLOCKS.UL_LIST]: (node,children) => {
-        return <ul className={style.bullets}>{children} {...inspectorProps({ entryId: updatedContent.sys.id, fieldId: "details" })}</ul>
+        return <ul className={style.bullets}>{children} {inspectorProps({ entryId: updatedContent.sys.id, fieldId: "details" })}</ul>
       },
       [BLOCKS.HEADING_3]: (node,children) => {
-        return <h3>{children} {...inspectorProps({ entryId: updatedContent.sys.id, fieldId: "details" })}</h3>
+        return <h3>{children} {inspectorProps({ entryId: updatedContent.sys.id, fieldId: "details" })}</h3>
       },
       [BLOCKS.PARAGRAPH]: (node,children) => {
-        return <p>{children} {...inspectorProps({ entryId: updatedContent.sys.id, fieldId: "details" })}</p>
+        return <p>{children} {inspectorProps({ entryId: updatedContent.sys.id, fieldId: "details" })}</p>
       }
     },
     

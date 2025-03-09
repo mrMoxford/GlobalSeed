@@ -19,13 +19,13 @@ const RICH_TEXT_OPTIONS = {
       return <ul className={style.bullets}>{children}</ul>
     },
     [BLOCKS.HEADING_3]: (node,children) => {
-      return <h3>{children} {...inspectorProps({ entryId: updatedContent.sys.id, fieldId: "details" })}</h3>
+      return <h3>{children} {inspectorProps({ entryId: updatedContent.sys.id, fieldId: "details" })}</h3>
     },
     [BLOCKS.HEADING_4]: (node,children) => {
-      return <h4>{children} {...inspectorProps({ entryId: updatedContent.sys.id, fieldId: "details" })}</h4>
+      return <h4>{children} {inspectorProps({ entryId: updatedContent.sys.id, fieldId: "details" })}</h4>
     },
     [BLOCKS.PARAGRAPH]: (node,children) => {
-      return <p>{children} {...inspectorProps({ entryId: updatedContent.sys.id, fieldId: "details" })}</p>
+      return <p>{children} {inspectorProps({ entryId: updatedContent.sys.id, fieldId: "details" })}</p>
     }
   },
   

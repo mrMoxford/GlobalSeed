@@ -1,3 +1,5 @@
+
+'use server'
 import MiniCard from '@/app/components/mini-card/MiniCard'
 import style from './programs.module.css'
 import {getMiniCard} from "../../lib/contentful"
@@ -8,7 +10,7 @@ const globalSwim = await getMiniCard("2Jazk6kLlVg74UHIdQQKyi", isEnabled)
 const globalCheer = await getMiniCard("6ULZMQgTJsMViKlDQrVsFr", isEnabled)
 const globalPark = await getMiniCard("5NCb1ROGaiLt7Rf3fGiIhy", isEnabled)
 
-export default function Programs() {
+export default async function Programs() {
  
   return (
   
