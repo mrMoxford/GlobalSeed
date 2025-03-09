@@ -9,15 +9,11 @@ import { getHero, getAbout } from "./lib/contentful";
 import { draftMode } from "next/headers";
 
 
-
+export const dynamic = "force-dynamic";
 
 export default async function Home() {
   const {isEnabled} = await draftMode()
-  try {
-   isEnabled
-  } catch (e) {
-    console.error("draftMode() is not available:", e);
-  }
+ 
 
   const HeroData = await getHero("1DAm1YnETUcalNhWN8QZyr", isEnabled)
   

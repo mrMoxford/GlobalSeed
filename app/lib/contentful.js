@@ -1,6 +1,6 @@
 
 
-
+'use server'
   
   undefined // Set a variable that contains all the fields needed for articles when a fetch for
   // content is performed
