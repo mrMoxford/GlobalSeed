@@ -4,12 +4,19 @@ import Link from 'next/link'
 import style from './hero.module.css'
 import Image from 'next/image'
 import { useContentfulLiveUpdates, useContentfulInspectorMode } from "@contentful/live-preview/react";
-
-export default function Hero({data}) {
+import { ContentfulPreviewProvider } from "../../api/contentful-preview/previewAPI";
+export default function Hero({data,isEnabled}) {
   const updatedData = useContentfulLiveUpdates(data);
 
   const inspectorProps = useContentfulInspectorMode();
   return (
+    <ContentfulPreviewProvider
+    locale="en-US"
+    enableInspectorMode={isEnabled}
+    enableLiveUpdates={isEnabled}
+    debugMode={isEnabled}
+    targetOrigin="https://app.contentful.com"
+  >
     <section className={style.container}>
     <header className={style.textContainer}>
       <h1 className={style.title}>{updatedData.title} {inspectorProps({ entryId: updatedData.sys.id, fieldId: "title" })}</h1>
@@ -22,5 +29,6 @@ export default function Hero({data}) {
         
     </div>
     </section>
+    </ContentfulPreviewProvider>
   )
 }
