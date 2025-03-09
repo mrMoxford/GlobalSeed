@@ -24,7 +24,7 @@ export default function Navbar() {
         <Link className= {pathname === '/programs' ? style.active : style.link} href= "/programs"> Programs</Link>
         <Link className= {pathname === '/study-abroad' ? style.active : style.link} href= "/study-abroad"> Study Abroad</Link>
         {/* <Link className= {router.pathname == '/consulting' ? 'active' : style.link} href= "/consulting"> Consulting</Link> */}
-        <Link className= {pathname == '/contact' ? style.active : style.link} href= "/contact"> Contact</Link>
+        <Link className= {pathname == '/contact' ? style.active : style.link} href= "https://app.jibun-apps.jp/form/6c99f0e1-88ee-4f79-ad95-6d1f329c5d7d/new"> Contact</Link>
       </ul>
       <div className={style.navbar_menu}>
         <Image
@@ -48,7 +48,7 @@ export default function Navbar() {
           <Link onClick={handleNavLink} className= {style.link} href= "/programs"> Programs</Link>
           <Link onClick={handleNavLink} className= {style.link} href= "/study-abroad"> Study Abroad</Link>
           {/* <Link onClick={handleNavLink} className= {style.link} href= "/consulting"> Consulting</Link> */}
-          <Link onClick={handleNavLink} className= {style.link} href= "/contact"> Contact</Link>
+          <Link onClick={handleNavLink} className= {style.link} href= "https://app.jibun-apps.jp/form/6c99f0e1-88ee-4f79-ad95-6d1f329c5d7d/new"> Contact</Link>
           </ul>
         </div>
       )}

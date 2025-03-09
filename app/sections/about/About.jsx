@@ -1,23 +1,33 @@
+'use client'
+
 import style from './about.module.css'
 import Image from 'next/image'
-import { getAbout } from '@/app/lib/contentful'
+import { useContentfulLiveUpdates, useContentfulInspectorMode } from "@contentful/live-preview/react";
 
-const data = await getAbout("7HJSjxt0IjbdMYZriaEmXA", false)
-export default function About() {
+export default function About({data}) {
+  const updatedData = useContentfulLiveUpdates(data);
+  console.log(updatedData)
+
+  const inspectorProps = useContentfulInspectorMode();
   
   return (
     <section id="about" className={style.aboutContainer}>
       <div className={style.imageContainer}>
-        <Image className={style.image} src={data.image.url} alt={data.image.title} height={data.image.height} width={data.image.width}></Image>
+        <Image className={style.image} src={updatedData.image.url} alt={updatedData.image.title} height={updatedData.image.height} width={updatedData.image.width}></Image>
       </div>
-      <div className={style.textContainer}>
-        <h2 className={style.title}>
-        {data.title}
+      <div className={style.textContainer} >
+        <h2 className={style.title} {...inspectorProps({ entryId: updatedData.sys.id, fieldId: "title" })}>
+        {updatedData.title}
+        
         </h2>
         <p>
-         {data.discription}
+         {updatedData.discription}
+         {inspectorProps({ entryId: updatedData.sys.id, fieldId: "discription" })}
         </p>
       </div>
     </section>
   )
 }
+
+
+

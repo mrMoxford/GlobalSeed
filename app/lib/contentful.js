@@ -30,6 +30,9 @@
   
   `
   const HERO_GRAPHQL_FIELDS = `
+    sys{
+          id
+        }
     title
     imagesCollection{
       items{
@@ -49,6 +52,9 @@
       url
       height
       width
+    }
+    sys{
+      id
     }
     title
     discription
