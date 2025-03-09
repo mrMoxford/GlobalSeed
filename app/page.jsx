@@ -8,17 +8,17 @@ import Programs from "./sections/programs/Programs"
 import { getHero, getAbout } from "./lib/contentful";
 import { draftMode } from "next/headers";
 
-const { isEnabled } = await draftMode()
-
-const HeroData = await getHero("1DAm1YnETUcalNhWN8QZyr", isEnabled)
-
-const AboutData = await getAbout("7HJSjxt0IjbdMYZriaEmXA", isEnabled)
 
 
 
 export default async function Home() {
 
+  const { isEnabled } = draftMode()
 
+  const HeroData = await getHero("1DAm1YnETUcalNhWN8QZyr", isEnabled)
+  
+  const AboutData = await getAbout("7HJSjxt0IjbdMYZriaEmXA", isEnabled)
+  
   return (
 
     <main>
