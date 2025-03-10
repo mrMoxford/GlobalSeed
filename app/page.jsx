@@ -4,7 +4,8 @@ import Hero from "./sections/hero/Hero";
 import Partners from "./sections/partners/Partners";
 import Programs from "./sections/programs/Programs"
 import { getHero, getAbout } from "./lib/contentful";
-import { draftMode } from "next/headers";
+import { draftMode } from "next/headers"
+import { ContentfulPreviewProvider } from "./api/contentful-preview/previewAPI";
 
 
 export const dynamic = "force-dynamic";
@@ -36,11 +37,19 @@ export default async function Home() {
   return (
 
     <main>
-      <Hero isEnabled={isEnabled} data={HeroData}/>
-      <About isEnabled={isEnabled} data={AboutData}/>
+      <ContentfulPreviewProvider
+      locale="en-US"
+      enableInspectorMode={isEnabled}
+      enableLiveUpdates={isEnabled}
+      debugMode={isEnabled}
+      targetOrigin="https://app.contentful.com"
+      >
+      <Hero  data={HeroData}/>
+      <About  data={AboutData}/>
       <Instagram/>
       <Programs/>
       <Partners/>
+      </ContentfulPreviewProvider>
     </main>
 
   )
