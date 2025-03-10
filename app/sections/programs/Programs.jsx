@@ -19,7 +19,7 @@ export default async function Programs() {
   
     <section className={style.programsContainer}>
         <ContentfulPreviewProvider
-      locale="en-US"
+      locale="ja"
       enableInspectorMode={isEnabled}
       enableLiveUpdates={isEnabled}
       debugMode={isEnabled}

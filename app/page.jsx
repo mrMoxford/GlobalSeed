@@ -38,7 +38,7 @@ export default async function Home() {
 
     <main>
       <ContentfulPreviewProvider
-      locale="en-US"
+      locale="ja"
       enableInspectorMode={isEnabled}
       enableLiveUpdates={isEnabled}
       debugMode={isEnabled}
