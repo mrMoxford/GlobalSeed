@@ -31,16 +31,17 @@ export async function GET(request) {
   if (!program) {
     return new Response('Program not found', { status: 404 });
   }
-  console.log("draft-enabled for:", program.title)
+  
   // Enable Draft Mode to fetch the preview content
-  (await draftMode()).enable();
+  const draft = await draftMode();
+  draft.enable();
 
 
   const cookieStore = await cookies();
   const cookie = cookieStore.get('__prerender_bypass');
-  cookies().set({
-    name: '__prerender_bypass',
-    value: cookie?.value,
+
+
+  cookieStore.set('__prerender_bypass', cookie?.value, {
     httpOnly: true,
     path: '/',
     secure: true,
