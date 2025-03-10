@@ -28,8 +28,7 @@ export async function GET(request) {
   }
 
   // Enable Draft Mode to fetch the preview content
-  const draft = await draftMode()
-  draft.enable();
+  draftMode().enable()
 
   
 
