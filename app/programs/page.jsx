@@ -6,7 +6,7 @@ import { ContentfulPreviewProvider } from '@/app/api/contentful-preview/previewA
 import GlobalCheer from "../sections/globalCheer/GlobalCheer";
 import GlobalAdventure from "../sections/globalAdventure/GlobalAdventure";
 import style from './pricing.module.css';  
-import { getProgramme } from '../lib/contentful'; 
+import { getProgram } from '../lib/contentful'; 
 
 
 export const dynamic = "force-dynamic";
@@ -15,10 +15,10 @@ export default async function Programs() {
 
   const { isEnabled } = await draftMode(); 
 async function fetchProgramData(isEnabled) {
-  const GlobalCheerA = await getProgramme('5RBifgexTEE1zE3WbD1apc', isEnabled);
-  const GlobalCheerB = await getProgramme('66vIUTeoN51KqEVzEKL0jD', isEnabled);
-  const GlobalAdventureT = await getProgramme('34IP87NRcEkz6X7xDNfwqb', isEnabled);
-  const GlobalAdventureS = await getProgramme('5fZbbYpbjq3if8qzv6oCzO', isEnabled);
+  const GlobalCheerA = await getProgram('5RBifgexTEE1zE3WbD1apc', isEnabled);
+  const GlobalCheerB = await getProgram('66vIUTeoN51KqEVzEKL0jD', isEnabled);
+  const GlobalAdventureT = await getProgram('34IP87NRcEkz6X7xDNfwqb', isEnabled);
+  const GlobalAdventureS = await getProgram('5fZbbYpbjq3if8qzv6oCzO', isEnabled);
  
   if (!GlobalCheerA || !GlobalCheerB || !GlobalAdventureT || !GlobalAdventureS) {
     notFound(); 

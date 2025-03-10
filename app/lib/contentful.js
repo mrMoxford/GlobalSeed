@@ -6,7 +6,7 @@
   // content is performed
   import PropTypes from "prop-types";
 
-  const PROGRAMMES_GRAPHQL_FIELDS = `
+  const PROGRAMS_GRAPHQL_FIELDS = `
     sys{
       id
     }
@@ -16,7 +16,7 @@
         json
       }
   `;
-  const PROGRAMMES_MINI_GRAPHQL_FIELDS =`
+  const PROGRAMS_MINI_GRAPHQL_FIELDS =`
     sys{
       id
     }
@@ -136,7 +136,7 @@ async function fetchCollection(id, isDraftMode, collectionName, fields) {
 }
 
 // Specialized utility functions for each collection
-export async function getAllProgrammes(limit = 3, isDraftMode = false) {
+export async function getAllPrograms(limit = 3, isDraftMode = false) {
   if (typeof limit !== "number" || limit <= 0) {
     throw new Error("The 'limit' parameter must be a positive number.");
   }
@@ -145,7 +145,7 @@ export async function getAllProgrammes(limit = 3, isDraftMode = false) {
     query {
       programeCardCollection(limit: ${limit}) {
         items {
-          ${PROGRAMMES_GRAPHQL_FIELDS}
+          ${PROGRAMS_GRAPHQL_FIELDS}
         }
       }
     }
@@ -154,12 +154,12 @@ export async function getAllProgrammes(limit = 3, isDraftMode = false) {
   return extractEntries(response, "programeCardCollection");
 }
 
-export async function getProgramme(id, isDraftMode = false) {
-  return fetchCollection(id, isDraftMode, "programeCardCollection", PROGRAMMES_GRAPHQL_FIELDS);
+export async function getProgram(id, isDraftMode = false) {
+  return fetchCollection(id, isDraftMode, "programeCardCollection", PROGRAMS_GRAPHQL_FIELDS);
 }
 
 export async function getMiniCard(id, isDraftMode = false) {
-  return fetchCollection(id, isDraftMode, "programMiniCardCollection", PROGRAMMES_MINI_GRAPHQL_FIELDS);
+  return fetchCollection(id, isDraftMode, "programMiniCardCollection", PROGRAMS_MINI_GRAPHQL_FIELDS);
 }
 
 export async function getHero(id, isDraftMode = false) {
@@ -181,12 +181,12 @@ export async function getStudyAbroad(id, isDraftMode = false) {
     isDraftMode: PropTypes.bool,
   };
 
-  getAllProgrammes.propTypes = {
+  getAllPrograms.propTypes = {
     limit: PropTypes.number,
     isDraftMode: PropTypes.bool,
   };
   
-  getProgramme.propTypes = commonPropTypes
+  getProgram.propTypes = commonPropTypes
   getMiniCard.propTypes = commonPropTypes
   getHero.propTypes = commonPropTypes
   getAbout.propTypes = commonPropTypes
