@@ -13,7 +13,7 @@ export async function GET(request) {
   const programId = searchParams.get('id');
   
 
-  if (!secret || !contentId ) {
+  if (!secret || !programId ) {
     return new Response('Missing parameters', { status: 400 });
   }
 
