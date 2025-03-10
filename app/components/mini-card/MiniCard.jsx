@@ -20,8 +20,8 @@ export default function MiniCard(props) {
         height={updatedContent.cardImage.height}/>
       </div>
         <div className={style.textContainer}>
-            <h3>{updatedContent.cardTitle} {...inspectorProps({fieldId: "cardTitle" })}</h3>
-            <p>{updatedContent.details} {...inspectorProps({ fieldId: "details" })} </p>
+            <h3>{updatedContent.cardTitle} {inspectorProps({fieldId: "cardTitle" })}</h3>
+            <p>{updatedContent.details} {inspectorProps({ fieldId: "details" })} </p>
             <Link className="link" href="/programs">Learn More</Link>
         </div>
     </div>

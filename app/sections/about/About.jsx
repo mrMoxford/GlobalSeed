@@ -31,7 +31,7 @@ export default  function About({data,isEnabled}) {
         </h2>
         <p>
          {updatedData.discription}
-         {...inspectorProps({ fieldId: "discription" })}
+         {inspectorProps({ fieldId: "discription" })}
         </p>
       </div>
     </section>
