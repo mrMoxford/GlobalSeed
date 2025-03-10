@@ -31,7 +31,7 @@ async function fetchProgramData(isEnabled) {
 
   return (
     <ContentfulPreviewProvider
-      locale="ja"
+      locale="en-US"
       enableInspectorMode={isEnabled}
       enableLiveUpdates={isEnabled}
       debugMode={isEnabled}
