@@ -2,7 +2,7 @@
 
 import style from './about.module.css'
 import Image from 'next/image'
-import { useContentfulLiveUpdates, useContentfulInspectorMode } from "@contentful/live-preview/react";
+import { useContentfulLiveUpdates } from "@contentful/live-preview/react";
 import { ContentfulPreviewProvider } from "../../api/contentful-preview/previewAPI";
 
 export default  function About({data,isEnabled}) {
@@ -10,7 +10,7 @@ export default  function About({data,isEnabled}) {
   const updatedData = useContentfulLiveUpdates(data);
   
 
-  const inspectorProps = useContentfulInspectorMode({ entryId: data.sys.id,});
+  
   
   return (
     <ContentfulPreviewProvider
@@ -25,13 +25,13 @@ export default  function About({data,isEnabled}) {
         <Image className={style.image} src={updatedData.image.url} alt={updatedData.image.title} height={updatedData.image.height} width={updatedData.image.width}></Image>
       </div>
       <div className={style.textContainer} >
-        <h2 className={style.title} {...inspectorProps({ fieldId: "title" })}>
+        <h2 className={style.title}>
         {updatedData.title}
         
         </h2>
         <p>
          {updatedData.discription}
-         {inspectorProps({ fieldId: "discription" })}
+      
         </p>
       </div>
     </section>
