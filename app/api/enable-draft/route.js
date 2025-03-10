@@ -11,7 +11,9 @@ export async function GET(request) {
 
   const { searchParams } = new URL(request.url);
   const secret = searchParams.get('secret');
-  const programId = searchParams.get('id'); 
+  const bypass = searchParams.get('x-vercel-protection-bypass');
+  const programId = searchParams.get('id');
+  
 
   if (!secret || !programId) {
     return new Response('Missing parameters', { status: 400 });
@@ -31,9 +33,10 @@ export async function GET(request) {
   }
   console.log("draft-enabled for:", program.title)
   // Enable Draft Mode to fetch the preview content
-  draftMode().enable();
+  (await draftMode()).enable();
 
-  
+
+  const cookieStore = await cookies();
   const cookie = cookieStore.get('__prerender_bypass');
   cookies().set({
     name: '__prerender_bypass',
@@ -45,6 +48,12 @@ export async function GET(request) {
   });
 
   
-  redirect(`/programs?id=${programId}`);
+  redirect(
+    `/programs?${new URLSearchParams({
+      id: programId,
+      'x-vercel-protection-bypass': bypass || '',
+      'x-vercel-set-bypass-cookie': 'samesitenone',
+    }).toString()}`
+  );
  
 }
