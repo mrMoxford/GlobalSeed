@@ -25,7 +25,7 @@ export async function GET(request) {
   
 
   if (!mini) {
-    return new Response('Programs Mini info not found', { status: 404 });
+    return new Response('Programs Mini module not found', { status: 404 });
   }
   
 

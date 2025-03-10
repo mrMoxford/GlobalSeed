@@ -25,7 +25,7 @@ export async function GET(request) {
   
 
   if (!hero) {
-    return new Response('Hero info not found', { status: 404 });
+    return new Response('Hero module not found', { status: 404 });
   }
   
 

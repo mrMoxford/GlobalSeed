@@ -26,7 +26,7 @@ export async function GET(request) {
   
 
   if (!about) {
-    return new Response('About info not found', { status: 404 });
+    return new Response('About module not found', { status: 404 });
   }
   
 
