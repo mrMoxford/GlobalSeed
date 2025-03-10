@@ -1,5 +1,3 @@
-
-
 import About from "./sections/about/About";
 import Instagram from "./sections/instagramGrid/Instagram"
 import Hero from "./sections/hero/Hero";
