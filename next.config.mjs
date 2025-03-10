@@ -16,7 +16,7 @@ const nextConfig = {
           headers: [
             {
               key: 'X-Frame-Options',
-              value: 'SAMEORIGIN',
+              value: '"ALLOW-FROM https://app.contentful.com"',
             },
             {
               key: 'Content-Security-Policy',
