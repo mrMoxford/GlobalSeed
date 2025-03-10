@@ -15,10 +15,26 @@ export default async function Home() {
   const {isEnabled} = await draftMode()
  
 
-  const HeroData = await getHero("1DAm1YnETUcalNhWN8QZyr", isEnabled)
-  
-  const AboutData = await getAbout("7HJSjxt0IjbdMYZriaEmXA", isEnabled)
-  
+  let HeroData = null;
+  let AboutData = null;
+
+  try {
+    HeroData = await getHero("1DAm1YnETUcalNhWN8QZyr", isEnabled);
+    if (!HeroData) {
+      console.warn("⚠️ HeroData is undefined or null.");
+    }
+  } catch (error) {
+    console.error("❌ Error fetching HeroData:", error);
+  }
+
+  try {
+    AboutData = await getAbout("7HJSjxt0IjbdMYZriaEmXA", isEnabled);
+    if (!AboutData) {
+      console.warn("⚠️ AboutData is undefined or null.");
+    }
+  } catch (error) {
+    console.error("❌ Error fetching AboutData:", error);
+  }
   return (
 
     <main>

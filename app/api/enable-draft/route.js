@@ -7,7 +7,6 @@ export async function GET(request) {
   // Parse query string parameters
   const { searchParams } = new URL(request.url);
   const secret = searchParams.get('secret');
-  const bypass = searchParams.get('x-vercel-protection-bypass');
   const programId = searchParams.get('id'); // Use a unique ID for the program
 
   if (!secret || !programId) {
