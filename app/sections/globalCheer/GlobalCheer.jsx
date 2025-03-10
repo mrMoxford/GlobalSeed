@@ -29,7 +29,7 @@ import { useContentfulLiveUpdates} from "@contentful/live-preview/react";
     }
   return (
     <section className={`${style.container} ${props.className} `}>
-            <h2 className={style.cardTitle}></h2>
+            <h2 className={style.cardTitle}>{updatedContent.title}</h2>
             <p className={style.info}></p>
             <div  className={style.textContainer}>
               {documentToReactComponents(updatedContent.details.json,RICH_TEXT_OPTIONS)}
