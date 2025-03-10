@@ -1,6 +1,6 @@
 // / app/api/preview/route.js (or any other relevant API route in your Next.js App)
 import { getProgramme } from '../../lib/contentful'; // Adjust the path accordingly
-import { cookies, draftMode } from 'next/headers';
+import {  draftMode } from 'next/headers';
 import { redirect } from 'next/navigation';
 
 export async function GET(request) {
@@ -27,23 +27,12 @@ export async function GET(request) {
   }
 
   // Enable Draft Mode to fetch the preview content
-  draftMode().enable();
+  const draft = await draftMode()
+  draft.enable();
 
-  // Manually override cookie for live-preview support
-  const cookie = cookies().get('__prerender_bypass');
-  cookies().set('__prerender_bypass', cookie?.value, {
-    httpOnly: true,
-    path: '/',
-    secure: true,
-    sameSite: 'none',
-  });
+  
 
-  // Redirect to the fixed preview page, passing the program ID and any other necessary query params
-  redirect(
-    `/programs?${new URLSearchParams({
-      id: programId,
-      'x-vercel-protection-bypass': bypass || '',
-      'x-vercel-set-bypass-cookie': 'samesitenone',
-    }).toString()}`
-  );
+  
+  redirect(`/programs?id=${programId}`);
+ 
 }
