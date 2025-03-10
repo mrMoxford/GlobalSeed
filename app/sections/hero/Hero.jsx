@@ -9,7 +9,7 @@ export default function Hero({data,isEnabled}) {
   
   const updatedData = useContentfulLiveUpdates(data);
 
-  const inspectorProps = useContentfulInspectorMode();
+  const inspectorProps = useContentfulInspectorMode({ entryId: data.sys.id});
   return (
     <ContentfulPreviewProvider
     locale="en-US"
@@ -20,7 +20,7 @@ export default function Hero({data,isEnabled}) {
   >
     <section className={style.container}>
     <header className={style.textContainer}>
-      <h1 className={style.title}>{updatedData.title} {inspectorProps({ entryId: updatedData.sys.id, fieldId: "title" })}</h1>
+      <h1 className={style.title}>{updatedData.title} {inspectorProps({fieldId: "title" })}</h1>
       <Link className="link" href="#about"> Learn More </Link>
     </header>
     <div className={style.imageContainer}>

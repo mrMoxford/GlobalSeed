@@ -10,6 +10,7 @@
     sys{
       id
     }
+      __typename
       title
       priceInfo
       details {
@@ -27,6 +28,7 @@
             height}
     cardTitle
     details
+    __typename
   
   `
   const HERO_GRAPHQL_FIELDS = `
@@ -34,6 +36,7 @@
           id
         }
     title
+    __typename
     imagesCollection{
       items{
         sys{
@@ -58,11 +61,13 @@
     }
     title
     discription
+    __typename
   `
   const STUDY_ABROAD_GRAPHQL_FIELDS=`
     sys{
       id
     }
+      __typename
     title
     priceInfo
     first{

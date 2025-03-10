@@ -10,7 +10,7 @@ export default  function About({data,isEnabled}) {
   const updatedData = useContentfulLiveUpdates(data);
   
 
-  const inspectorProps = useContentfulInspectorMode();
+  const inspectorProps = useContentfulInspectorMode({ entryId: data.sys.id,});
   
   return (
     <ContentfulPreviewProvider
@@ -25,13 +25,13 @@ export default  function About({data,isEnabled}) {
         <Image className={style.image} src={updatedData.image.url} alt={updatedData.image.title} height={updatedData.image.height} width={updatedData.image.width}></Image>
       </div>
       <div className={style.textContainer} >
-        <h2 className={style.title} {...inspectorProps({ entryId: updatedData.sys.id, fieldId: "title" })}>
+        <h2 className={style.title} {...inspectorProps({ fieldId: "title" })}>
         {updatedData.title}
         
         </h2>
         <p>
          {updatedData.discription}
-         {inspectorProps({ entryId: updatedData.sys.id, fieldId: "discription" })}
+         {...inspectorProps({ fieldId: "discription" })}
         </p>
       </div>
     </section>
