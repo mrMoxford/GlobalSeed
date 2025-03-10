@@ -1,5 +1,5 @@
 import { getMiniCard } from '../../lib/contentful'; 
-import {  draftMode } from 'next/headers';
+import {  cookies,draftMode } from 'next/headers';
 import { redirect } from 'next/navigation';
 
 
@@ -33,7 +33,16 @@ export async function GET(request) {
   draft.enable();
 
 
+  const cookieStore = await cookies();
+  const cookie = cookieStore.get('__prerender_bypass');
 
+
+  cookieStore.set('__prerender_bypass', cookie?.value, {
+    httpOnly: true,
+    path: '/',
+    secure: true,
+    sameSite: 'none',
+  });
   
   redirect(
     "/"
