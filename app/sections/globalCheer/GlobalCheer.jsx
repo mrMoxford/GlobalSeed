@@ -30,7 +30,7 @@ import { useContentfulLiveUpdates} from "@contentful/live-preview/react";
   return (
     <section className={`${style.container} ${props.className} `}>
             <h2 className={style.cardTitle}>{updatedContent.title}</h2>
-            <p className={style.info}></p>
+            <p className={style.info}>{updatedContent.priceInfo}</p>
             <div  className={style.textContainer}>
               {documentToReactComponents(updatedContent.details.json,RICH_TEXT_OPTIONS)}
             <Link className ={style.button} href='https://app.jibun-apps.jp/form/6c99f0e1-88ee-4f79-ad95-6d1f329c5d7d/new' target='_blank'>Contact Us</Link>
