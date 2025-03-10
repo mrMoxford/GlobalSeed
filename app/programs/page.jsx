@@ -28,7 +28,7 @@ async function fetchProgramData(isEnabled) {
 }
   const { GlobalCheerA, GlobalCheerB, GlobalAdventureT, GlobalAdventureS } = await fetchProgramData(isEnabled);
   
-  console.log(GlobalCheerA)
+
   return (
     <ContentfulPreviewProvider
       locale="en-US"

@@ -1,5 +1,5 @@
 import { getAbout } from '../../lib/contentful'; 
-import { cookies, draftMode } from 'next/headers';
+import {  draftMode } from 'next/headers';
 import { redirect } from 'next/navigation';
 
 
@@ -8,7 +8,7 @@ export async function GET(request) {
 
   const { searchParams } = new URL(request.url);
   const secret = searchParams.get('secret');
-  const bypass = searchParams.get('x-vercel-protection-bypass');
+  
   const aboutId = searchParams.get('id');
   
 
@@ -33,24 +33,11 @@ export async function GET(request) {
   const draft = await draftMode();
   draft.enable();
 
-  const cookieStore = await cookies();
-  const cookie = cookieStore.get('__prerender_bypass');
-
-
-  cookieStore.set('__prerender_bypass', cookie?.value, {
-    httpOnly: true,
-    path: '/',
-    secure: true,
-    sameSite: 'none',
-  });
+  
 
   
   redirect(
-    `/${new URLSearchParams({
-      id: aboutId,
-      'x-vercel-protection-bypass': bypass || '',
-      'x-vercel-set-bypass-cookie': 'samesitenone',
-    }).toString()}`
+    "/"
   );
  
 }
