@@ -2,7 +2,7 @@
 .aboutContainer{
     display: grid;
     position: relative;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat( 1fr);
     gap: 1rem;
     padding: 5rem;
     align-items: center;
@@ -17,9 +17,8 @@
     
 }
 .image{
-    height: 50%;
     width: auto;
-    aspect-ratio: 1/1.5;
+    height: 50%;
     border-radius: 40px;
     object-fit: cover;
 }

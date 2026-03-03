@@ -12,7 +12,7 @@
     display: flex;
     height: 100%;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-around;
    
 }
 .title{
@@ -40,9 +40,11 @@
     align-items: center;
     justify-content: center;
     border-radius: 40px;
-    height: 100%;
-    object-fit: cover;
+    height: auto;
+    width: auto;
     aspect-ratio: 1;
+    object-fit: cover;
+    backdrop-filter: blur;
 }
 
 @media (max-width: 60em) {

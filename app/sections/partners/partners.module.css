@@ -18,6 +18,10 @@
    
 }
 
+.image{
+    height: auto;
+    width: auto;
+}
 .imageContainer{
     display: grid;
     grid-template-columns: repeat(4, auto);
@@ -28,8 +32,6 @@
     
 
 }
-
-
 
 
 @media (max-width: 60em){
